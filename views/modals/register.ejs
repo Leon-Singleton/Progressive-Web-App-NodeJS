@@ -1,0 +1,66 @@
+<!-- Register Modal -->
+<div id="registerModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sign Up</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <% include ../partials/messages %>
+                <form action="users/register" class="form" role="form" autocomplete="off" id="formRegister"
+                      method="POST">
+                    <div class="form-group">
+                        <label for="firstname">Firstname</label>
+                        <input type="firstname"
+                               id="firstname"
+                               name="firstname"
+                               placeholder="Enter Firstname"
+                               value="<%= typeof firstname != 'undefined' ? firstname : '' %>"
+                               class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Surname</label>
+                        <input type="surname"
+                               id="surname"
+                               name="surname"
+                               placeholder="Enter Surname"
+                               value="<%= typeof surname != 'undefined' ? surname : '' %>"
+                               class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter Email"
+                               value="<%= typeof email != 'undefined' ? email : '' %>"
+                               class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Create Password"
+                               value="<%= typeof password != 'undefined' ? password : '' %>"
+                               class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password"
+                               id="password2"
+                               name="password2"
+                               placeholder="Confirm Password"
+                               value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                               class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group py-4">
+                        <button class="btn btn-danger btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

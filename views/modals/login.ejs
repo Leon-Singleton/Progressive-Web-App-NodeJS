@@ -1,0 +1,37 @@
+<!-- login Modal -->
+<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <% include ../partials/messages %>
+                <form action="/users/login" class="form" role="form" autocomplete="off" id="formLogin" method="POST">
+                    <div class="form-group">
+                        <a href="#registerModal" data-toggle="modal" data-dismiss="modal" data-target="#registerModal"
+                           class="float-right">New user?</a>
+                        <label for="email">Email</label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter Email" class="form-control form-control-lg" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               class="form-control"
+                               placeholder="Enter Password" class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group py-4">
+                        <button class="btn btn-danger btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

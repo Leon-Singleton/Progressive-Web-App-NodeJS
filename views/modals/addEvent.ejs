@@ -1,0 +1,87 @@
+<!-- Add Story Modal -->
+<div id="addEventModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Event</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <% include ../partials/messages %>
+                <form class="form" role="form" autocomplete="off" id="eventAdd" novalidate="" method="POST"
+                      onsubmit="onSubmit('/index')">
+
+                    <div class="form-group">
+                        <label for="eventName">Event name</label>
+                        <input type="text" class="form-control form-control-md" name="eventName" id="eventName"
+                               required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Start Date &ensp;</label>
+                        <input type="datetime-local" name="eventStartDate" max="3000-12-31"
+                               min="1000-01-01" class="form" id="eventStartDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label>End Date &emsp;</label>
+                        <input type="datetime-local" name="eventEndDate" max="3000-12-31"
+                               min="1000-01-01" class="form" id="eventEndDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uname1">Picture</label>
+                        <input type="text" class="form-control form-control-md" name="eventPicture" id="eventPicture"
+                               required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleTextarea">Event Description</label>
+                        <textarea class="form-control" name="eventDescription" id="eventDescription"
+                                  rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uname1">Location</label>
+                        <input type="text" class="form-control form-control-md col-11" name="eventLocation"
+                               id="eventLocation" required="">
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group col-md-8">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" name="eventCity" id="eventCity">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputZip">Postcode</label>
+                            <input type="text" class="form-control" name="eventPostcode" id="eventPostcode">
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <input type="hidden" class="form-control" name="eventUsername" id="eventUsername"
+                                   value="<%= username %>">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="hidden" class="form-control" name="eventFirstname" id="eventFirstname"
+                                   value="<%= firstname %>">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="hidden" class="form-control" name="eventSurname" id="eventSurname"
+                                   value="<%= surname %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group py-4">
+                        <button class="btn btn-danger btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button name="btnCreateEvent" type="submit" class="btn btn-success btn-lg float-right"
+                                id="btnCreateEvent">Create
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

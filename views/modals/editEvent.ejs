@@ -1,0 +1,68 @@
+<!-- Edit Story Modal -->
+<div id="editEventModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit Event</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form class="form" role="form" autocomplete="off" id="eventAdd" novalidate="" method="POST">
+
+                    <div class="form-group">
+                        <label for="eventName">Event name</label>
+                        <input type="text" class="form-control form-control-md" name="eventName" id="editEventName"
+                               required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Start Date &ensp;</label>
+                        <input type="datetime-local" name="editEventStartDate" max="3000-12-31"
+                               min="1000-01-01" class="form" id="editEventStartDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label>End Date &emsp;</label>
+                        <input type="datetime-local" name="editEventEndDate" max="3000-12-31"
+                               min="1000-01-01" class="form" id="editEventEndDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uname1">Picture</label>
+                        <input type="text" class="form-control form-control-md" name="editEventPicture"
+                               id="editEventPicture" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleTextarea">Event Description</label>
+                        <textarea class="form-control" id="editEventDescription" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uname1">Location</label>
+                        <input type="text" class="form-control form-control-md col-11" name="editEventLocation"
+                               id="editEventLocation" required="">
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group col-md-8">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="editEventCity" name="editEventCity">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="editEventPostcode" name="editEventPostcode">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group py-4">
+                        <button class="btn btn-danger btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

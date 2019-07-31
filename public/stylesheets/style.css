@@ -1,0 +1,58 @@
+#searchbar {
+    background: lightblue;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.buttonactive {
+    background-color: green !important;
+}
+
+@import "bootstrap";
+
+/* change all .btn to .btn-sm size on xs */
+@include media-breakpoint-between(xs, sm) {
+    .btn {
+    @include button-size($ input-btn-padding-y-sm, $ input-btn-padding-x-sm, $ font-size-sm, $ line-height-sm, $ btn-border-radius-sm);
+    }
+}
+
+#img-upload {
+    width: 100%;
+}
+
+.eventImg {
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.thumbnail {
+    max-width: 150px;
+    overflow: hidden;
+}
+
+
+.storyImg {
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.image-checkbox
+{
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 4px solid transparent;
+    outline: 0;
+}
+
+.image-checkbox input[type="checkbox"]
+{
+    display: none;
+}
+
+.image-checkbox-checked
+{
+    border-color: #f58723;
+}
